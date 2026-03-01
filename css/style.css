@@ -1,0 +1,337 @@
+/* الألوان والهوية لشركة حميد */
+:root {
+    --primary: #0084ff;
+    --secondary: #6c5ce7;
+    --dark: #2d3436;
+    --light: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light);
+    direction: rtl;
+    text-align: right;
+}
+
+/* الهيدر (شريط التنقل) */
+.main-nav {
+    background: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.6rem; font-weight: bold; color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; gap: 20px; margin: 0; }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--dark); 
+    font-weight: 600;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: var(--primary); }
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.nav-link:hover { color: var(--primary); }
+
+/* تنسيق عام للحاويات */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* تنسيق كروت الأدوية (للصفحة الرئيسية) */
+.medicine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.med-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.med-card:hover { transform: translateY(-10px); }
+
+/* تنسيق أزرار التواصل (لصفحة اتصل بنا) */
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.wa-btn { background: #25d366; }
+.mail-btn { background: #eb4d4b; }
+.fb-btn { background: #1877f2; }
+.ig-btn { background: #e4405f; }
+.tw-btn { background: #1da1f2; }
+.li-btn { background: #0077b5; }
+
+/* تنسيق إضافي للأزرار */
+.mega-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mega-btn:hover { background: var(--secondary); }
+
+/* تنسيق السلة الجانبية */
+.side-cart {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    z-index: 1001;
+    padding: 20px;
+}
+
+.side-cart.open { right: 0; }
+
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-box {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* تنسيق صفحات المصادقة */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.auth-card {
+    background: white;
+    display: flex;
+    width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.auth-side {
+    width: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.signup-bg { background: var(--secondary); }
+
+.auth-form-container {
+    width: 60%;
+    padding: 50px;
+}
+
+.auth-form-container h2 { color: var(--dark); margin-bottom: 30px; }
+
+.auth-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.auth-form-container button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* تنسيق صفحة التوصيل */
+.delivery-hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.delivery-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.delivery-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* تنسيق البطاقات */
+.info-card-big {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* تنسيق الهيرو */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Styles moved from register.html */
+/* تنسيق خاص لشاشة تسجيل الدخول */
+body.login-page {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0984e3, #6c5ce7);
+    font-family: 'Segoe UI', sans-serif;
+}
+.login-card {
+    background: white;
+    display: flex;
+    width: 850px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.login-info {
+    background: #2d3436;
+    color: white;
+    width: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.login-info i { font-size: 60px; color: #0084ff; margin-bottom: 20px; }
+.login-form-side {
+    width: 60%;
+    padding: 50px;
+    background: #fff;
+}
+h2 { color: #2d3436; margin-bottom: 30px; font-size: 28px; }
+.input-group { position: relative; margin-bottom: 20px; }
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b2bec3;
+}
+input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+}
+input:focus { border-color: #0984e3; box-shadow: 0 0 8px rgba(9,132,227,0.2); }
+.login-btn {
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover { background: #074b83; transform: translateY(-2px); }
+.footer-links { text-align: center; margin-top: 25px; color: #636e72; }
+.footer-links a { color: #0984e3; text-decoration: none; font-weight: bold; }
+
+/* helper classes */
+.note-text { color: #636e72; font-size: 14px; margin-bottom: 20px; }
+.login-footer {
+    text-align: center;
+    padding: 10px;
+    background: #2d3436;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* common footer used on most pages */
+.page-footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark);
+    color: white;
+    margin-top: 50px;
+}
+
+/* container modifiers */
+.container.centered { text-align: center; padding-top: 50px; }
+.container.small { max-width: 600px; text-align: center; }
+
+.contact-heading { color: var(--dark); }
+
+.med-card img { width: 100px; height: 100px; border-radius: 10px; margin-bottom: 10px; }
+.cart-item { padding: 10px; border-bottom: 1px solid #eee; }

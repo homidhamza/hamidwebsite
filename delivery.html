@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>التوصيل | شركة حميد للأدوية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">شركة حميد للأدوية</div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="delivery.html" class="active">التوصيل</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <a href="register.html" class="nav-link">تسجيل الدخول</a>
+        <a href="#" onclick="logout()" class="nav-link">تسجيل الخروج</a>
+    </nav>
+
+    <section class="delivery-hero">
+        <h1>خدمة التوصيل السريع 🚀</h1>
+        <p>نصلك أينما كنت في أسرع وقت ممكن</p>
+    </section>
+
+    <div class="container">
+        <form class="delivery-form">
+            <h2>اطلب توصيل الآن</h2>
+            <input type="text" placeholder="العنوان بالتفصيل" required>
+            <input type="tel" placeholder="رقم الهاتف" required>
+            <button type="button" class="mega-btn" onclick="alert('جاري معالجة طلب التوصيل')">إرسال الطلب</button>
+        </form>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 شركة حميد للأدوية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
